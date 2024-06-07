@@ -48,17 +48,3 @@ y_pred_logistic = logistic_model.predict(X_test)
 accuracy_logistic = accuracy_score(y_test, y_pred_logistic)
 print(f'Logistic Regression Accuracy: {accuracy_logistic}')
 
-
-# Second ML Model RandomForestClassifier
-from sklearn.ensemble import RandomForestClassifier
-
-# Initialize and train the model
-rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
-rf_model.fit(X_train, y_train)
-
-# Make predictions
-y_pred_rf = rf_model.predict(X_test)
-
-# Evaluate the model
-accuracy_rf = accuracy_score(y_test, y_pred_rf)
-print(f'Random Forest Accuracy: {accuracy_rf}')
